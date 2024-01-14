@@ -14,7 +14,7 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm test:coverage
+          command: npm run test:coverage
       - run:
           name: Upload coverage to Coveralls
           command: npx coveralls < coverage/lcov.info
