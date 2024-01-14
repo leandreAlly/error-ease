@@ -1,0 +1,56 @@
+version: '2' # required to adjust maintainability checks
+
+checks:
+  argument-count:
+    enabled: true
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: true
+    config:
+      threshold: 280
+  method-complexity:
+    enabled: true
+    config:
+      threshold: 10
+  method-count:
+    enabled: false
+    config:
+      threshold: 20
+  method-lines:
+    enabled: false
+    config:
+      threshold: 50
+  nested-control-flow:
+    enabled: true
+    config:
+      threshold: 4
+  return-statements:
+    enabled: true
+    config:
+      threshold: 4
+  similar-code:
+    enabled: false
+    config:
+      threshold:
+  identical-code:
+    enabled: true
+    config:
+      threshold:
+
+plugins:
+  eslint:
+    enabled: true
+    channel: 'eslint-8.36'
+    config:
+      file: '.eslintrc.json'
+
+exclude_patterns:
+  - 'config/'
+  - 'dist/'
+  - '**/node_modules/'
+  - '**/tests/'
