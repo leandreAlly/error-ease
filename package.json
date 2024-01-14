@@ -1,0 +1,18 @@
+{
+  "name": "error-ease",
+  "version": "1.0.0",
+  "description": "ErrorEase is a Node.js package that simplifies error handling in applications. It is written entirely in TypeScript, making it easy to use and integrate with Node.js syntax. Developers can focus on building robust and reliable Node.js applications with ErrorEase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leandreAlly",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.18.2"
+  }
+}
