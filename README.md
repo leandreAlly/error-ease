@@ -2,7 +2,7 @@
 
 ErrorEase is a Node.js package that simplifies error handling in applications. It is written entirely in TypeScript, making it easy to use and integrate with Node.js syntax. Developers can focus on building robust and reliable Node.js applications with ErrorEase.
 
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) [![Maintainability](https://api.codeclimate.com/v1/badges/97521bc99b33b8684e9e/maintainability)](https://codeclimate.com/github/leandreAlly/error-ease/maintainability)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/leandreAlly/error-ease/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/leandreAlly/error-ease/tree/main) [![Coverage Status](https://coveralls.io/repos/github/leandreAlly/error-ease/badge.svg?branch=main)](https://coveralls.io/github/leandreAlly/error-ease?branch=main) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) [![Maintainability](https://api.codeclimate.com/v1/badges/97521bc99b33b8684e9e/maintainability)](https://codeclimate.com/github/leandreAlly/error-ease/maintainability)
 
 ## Installation
 
