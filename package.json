@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "test": "vitest  --no-watch",
+    "test:dev": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint 'src/**/*.ts'",
     "prepare": "husky install"
   },
@@ -19,7 +22,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
   },
   "dependencies": {
     "@types/express": "^4.17.21",
