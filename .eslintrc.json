@@ -5,8 +5,7 @@
   "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" },
   "env": {
     "es6": true,
-    "node": true,
-    "vitest": true
+    "node": true
   },
   "plugins": ["prettier"],
   "rules": {
