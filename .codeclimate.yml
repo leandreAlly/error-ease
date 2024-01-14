@@ -53,4 +53,4 @@ exclude_patterns:
   - 'config/'
   - 'dist/'
   - '**/node_modules/'
-  - '**/tests/'
+  - 'tests/*.test.ts'
