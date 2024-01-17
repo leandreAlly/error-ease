@@ -9,15 +9,13 @@
   ],
   "scripts": {
     "clean": "del ./build/*",
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && vitest --no-watch && tsc",
     "test": "vitest  --no-watch",
     "test:dev": "vitest --watch",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint 'src/**/*.ts'",
     "prepare": "husky install"
   },
-  "author": "leandreAlly",
-  "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
@@ -41,5 +39,22 @@
       "npx prettier --write",
       "npx eslint --fix"
     ]
-  }
+  },
+  "keywords": [
+    "error",
+    "ease",
+    "express",
+    "error-ease",
+    "http"
+],
+  "private": false,
+  "author": "leandreAlly",
+  "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leandreAlly/error-ease.git"
+    },
+    "bugs": {
+        "url": "https://github.com/leandreAlly/error-ease/issues"
+    }
 }
