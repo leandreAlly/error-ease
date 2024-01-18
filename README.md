@@ -1,8 +1,13 @@
-# Error-ease ![Coming in 5 Days](https://img.shields.io/badge/Coming%20in-5%20Days-brightgreen)
+# Error-ease
 
 ErrorEase is a Node.js package that simplifies error handling in applications. It is written entirely in TypeScript, making it easy to use and integrate with Node.js syntax. Developers can focus on building robust and reliable Node.js applications with ErrorEase.
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/leandreAlly/error-ease/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/leandreAlly/error-ease/tree/main) [![Coverage Status](https://coveralls.io/repos/github/leandreAlly/error-ease/badge.svg?branch=main)](https://coveralls.io/github/leandreAlly/error-ease?branch=main) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) [![Maintainability](https://api.codeclimate.com/v1/badges/97521bc99b33b8684e9e/maintainability)](https://codeclimate.com/github/leandreAlly/error-ease/maintainability)
+[![npm version](https://img.shields.io/npm/v/error-ease.svg?style=flat-square)](https://www.npmjs.org/package/error-ease)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/leandreAlly/error-ease/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/leandreAlly/error-ease/tree/main)
+[![Coverage Status](https://coveralls.io/repos/github/leandreAlly/error-ease/badge.svg?branch=main)](https://coveralls.io/github/leandreAlly/error-ease?branch=main)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+[![Maintainability](https://api.codeclimate.com/v1/badges/97521bc99b33b8684e9e/maintainability)](https://codeclimate.com/github/leandreAlly/error-ease/maintainability)
+[![npm downloads](https://img.shields.io/npm/dm/error-ease.svg?style=flat-square)](https://npm-stat.com/charts.html?package=error-ease)
 
 ## Installation
 
@@ -179,7 +184,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-```
-
-```
