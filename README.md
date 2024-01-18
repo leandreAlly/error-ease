@@ -82,49 +82,92 @@ app.listen(3000, () => {
 
     With `asyncWrapper`, your code will be safe and any errors that occur in your route handler will be automatically caught and passed to the next middleware, without the need for a try-catch
 
-<!-- ## Using asyncWrapper for Error Handling
+4. **Error ease in Action**:
 
-The `asyncWrapper` is a utility function that simplifies error handling in Express routes. It wraps your route handlers and automatically catches any errors that occur, passing them to the next middleware. -->
+- **Throwing Errors with `BadRequestError`**: _this class is a custom error class that you can use to throw HTTP 400 Bad Request errors in your application. Here's how you can use it:_
 
-<!-- ### When to Use asyncWrapper:
+  ```javascript
+  import { BadRequestError } from 'error-ease';
 
-#### Inline Route Handlers
+  route.post('/login', async (req, res) => {
+    const { email, password } = req.body;
 
-If you're defining your route handlers inline, like this:
+    if (!email || !password) {
+      throw new BadRequestError('Email and password are required');
+    }
 
-```typescript
-route.get('/', async (req, res) => {
-  // statements
-});
-```
+    // Continue with your login logic...
+  });
+  ```
 
-You don't need to use `asyncWrapper`, unless you want to avoid adding a try-catch block. The `asyncWrapper` will automatically catch any errors that occur in your route handler and pass them to the next middleware.
+- **Throwing Errors with `ConflictRequestError`**:
+  _this class is a custom error class that you can use to throw HTTP 409 Conflict errors in your application. Here's how you can use it:_
 
-#### Separated Route Handlers
+  ```javascript
+  import { ConflictRequestError } from 'error-ease';
 
-If you're separating your route handlers from your route definitions, like this:
+  route.post('/register', async (req, res) => {
+    const { email } = req.body;
 
-```typescript
-const login = async (req, res) => {
-  // statements
-};
+    const userExists = await User.findOne({ email });
 
-route.get('/', login);
-```
+    if (userExists) {
+      throw new ConflictRequestError('User with this email already exists');
+    }
 
-You should use `asyncWrapper` to ensure that errors are properly caught and handled. Here's how you can use `asyncWrapper` in this case:
+    // Continue with your registration logic...
+  });
+  ```
 
-```typescript
-import { asyncWrapper } from 'error-ease';
+- **Throwing Errors with `DatabaseConnectionError`**:
+  _this class is a custom error class that you can use to throw errors when there's an issue connecting to your database. Here's how you can use it:_
 
-const login = asyncWrapper(async (req, res) => {
-  // statements
-});
+  ```javascript
+  import mongoose from 'mongoose';
+  import { DatabaseConnectionError } from 'error-ease';
 
-route.get('/', login);
-```
+  async function connectToDb() {
+    try {
+      await mongoose.connect('mongodb://localhost:27017/myapp');
+    } catch (err) {
+      throw new DatabaseConnectionError();
+    }
+  }
+  ```
 
-With `asyncWrapper`, your code will be safe and any errors that occur in your route handler will be automatically caught and passed to the next middleware, without the need for a try-catch block. -->
+- **Throwing Errors with `NotAuthorizedError`**:
+  _this class is a custom error class that you can use to throw HTTP 401 Unauthorized errors in your application. Here's how you can use it:_
+
+  ```javascript
+  import { NotAuthorizedError } from 'error-ease';
+
+  route.get('/protected', async (req, res) => {
+    if (!req.user) {
+      throw new NotAuthorizedError('You must be logged in to access this route');
+    }
+
+    // Continue with your route handler...
+  });
+  ```
+
+- **Throwing Errors with `NotFoundError`**:
+  _this class is a custom error class that you can use to throw HTTP 404 Not Found errors in your application. Here's how you can use it:_
+
+  ```javascript
+  import { NotFoundError } from 'error-ease';
+
+  route.get('/user/:id', async (req, res) => {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
+
+    // Continue with your route handler...
+  });
+  ```
+
+  **Note:** The error message ('User not found' in this example) is optional. If you don't provide a message, a default message will be used.
 
 ## Contributing
 
@@ -136,3 +179,7 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+```
+
+```
