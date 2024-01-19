@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { NotFoundError } from '../src';
+import { NotFoundError } from '..';
 import { StatusCode } from '../src/utils/status-code';
 
 describe('NotFoundError', () => {

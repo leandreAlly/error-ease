@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { DatabaseConnectionError } from '../src';
+import { DatabaseConnectionError } from '..';
 import { StatusCode } from '../src/utils/status-code';
 
 describe('DatabaseConnectionError', () => {

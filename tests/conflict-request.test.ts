@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { ConflictRequestError } from '../src';
+import { ConflictRequestError } from '..';
 import { StatusCode } from '../src/utils/status-code';
 
 describe('ConflictRequestError', () => {
