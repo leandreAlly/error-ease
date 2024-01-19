@@ -174,12 +174,15 @@ app.listen(3000, () => {
 
   **Note:** The error message ('User not found' in this example) is optional. If you don't provide a message, a default message will be used.
 
+  ⚠️ If you struggle with any issue feel free to check out this app where all errors are handled with `error-ease` 👉 [Prisma-auth](https://github.com/leandreAlly/prisma-authentication-and-authorization)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Read more on our contribution guidance 👉 [CONTRIBUTING](https://github.com/leandreAlly/error-ease/blob/main/CONTRIBUTING)
+
 
 ## License
 
