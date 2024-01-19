@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { asyncWrapper } from '../../src';
+import { asyncWrapper } from '../..';
 import { Request, Response } from 'express';
-import { BadRequestError } from '../../src';
+import { BadRequestError } from '../..';
 
 describe('asyncWrapper', () => {
   it('should call next with error if routeHandler throws an error', async () => {

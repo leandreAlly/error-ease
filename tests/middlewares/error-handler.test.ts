@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { Request, Response } from 'express';
-import { errorHandler } from '../../src';
+import { errorHandler } from '../..';
 import { StatusCode } from '../../src/utils/status-code';
 
 describe('errorHandler', () => {

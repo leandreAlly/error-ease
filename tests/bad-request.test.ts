@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { BadRequestError } from '../src';
+import { BadRequestError } from '..';
 import { StatusCode } from '../src/utils/status-code';
 
 describe('BadRequestError', () => {

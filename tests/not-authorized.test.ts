@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { NotAuthorizedError } from '../src';
+import { NotAuthorizedError } from '..';
 import { StatusCode } from '../src/utils/status-code';
 
 describe('NotAuthorizedError', () => {
