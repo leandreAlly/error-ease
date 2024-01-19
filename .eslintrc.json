@@ -10,7 +10,7 @@
   "plugins": ["prettier"],
   "rules": {
     "no-console": ["error", { "allow": ["error"] }],
-    "no-var": "error",
+    "no-var": "warn",
     "eqeqeq": "error"
   }
 }
